@@ -21,17 +21,13 @@ A browser-based number-guessing game built with React. Pick how many numbers you
 ## Running Locally
 
 ```bash
-git clone https://github.com/your-username/number-match.git
+git clone https://github.com/shukladhruve777-blip/number-match.git
 cd number-match
 npm install
 npm run dev
 ```
 
 Then open the local URL shown in your terminal (usually `http://localhost:5173`).
-
-## Live Demo
-
-[Add your deployed link here once it's live]
 
 ## Planned Improvements
 
