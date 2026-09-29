@@ -1,37 +1,138 @@
 # QuickGame
 
-# Number Match
+A React-based collection of small browser games built to practice interactive UI, state management, timing, randomization, and reusable JavaScript logic.
 
-A browser-based number-guessing game built with React. Pick how many numbers you want to play with, then try to guess the secret shuffled order across a set of dropdowns.
+## 🎮 Games
 
-## How to Play
+| Game | What it tests |
+|---|---|
+| **Number Match** | Memory, ordering, and user input |
+| **Higher or Lower** | Prediction and game state |
+| **Reaction Time** | Timing and user interaction |
 
-1. On the start screen, choose how many numbers you want to play with.
-2. Click **Start Game**.
-3. Pick a number in each dropdown - you're guessing the hidden order.
-4. Click **Confirm** to see how many you got right.
-5. Click **Reset** to try again with a new secret order, or **Back** to change the number count.
+## ✨ Features
 
-## Tech Stack
+- 3 playable browser games
+- Simple game selection menu
+- Separate React component for each game
+- React state management with `useState`
+- Random number and game generation
+- Timer-based gameplay
+- Reset and back-to-menu functionality
+- Reusable utility functions
+- ESLint for code quality
+- Vite development and production builds
 
-- React
-- Vite
-- Plain CSS
+## 🛠️ Tech Stack
 
-## Running Locally
+- **React**
+- **JavaScript**
+- **Vite**
+- **CSS**
+
+## 📁 Project Structure
+
+```
+QuickGame/
+└── react/
+    ├── src/
+    │   ├── games/
+    │   │   ├── HigherLower.jsx
+    │   │   ├── NumberMatch.jsx
+    │   │   └── ReactionTime.jsx
+    │   │
+    │   ├── utils/
+    │   │   ├── gameData.js
+    │   │   └── timeUtils.js
+    │   │
+    │   ├── App.jsx
+    │   ├── App.css
+    │   └── main.jsx
+    │
+    ├── package.json
+    └── vite.config.js
+```
+
+## 🧠 What I Practiced
+
+This project helped me practice:
+
+- React component design
+- State management
+- Conditional rendering
+- Event handling
+- JavaScript arrays and functions
+- Randomization
+- Timers and asynchronous behavior
+- Reusable utility functions
+- Organizing multiple features inside one React application
+
+## 🔄 Application Structure
+
+```
+                QuickGame
+                    │
+              Game Selection
+              /      |       \
+             /       |        \
+     Number Match  Higher/Lower  Reaction Time
+           │           │             │
+           └───────────┴─────────────┘
+                    React State
+                         │
+                  Shared Utilities
+```
+
+## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/shukladhruve777-blip/number-match.git
-cd number-match
+git clone https://github.com/shukladhruve777-blip/QuickGame.git
+cd QuickGame/react
 npm install
 npm run dev
 ```
 
-Then open the local URL shown in your terminal (usually `http://localhost:5173`).
+Then open the local URL shown in the terminal.
 
-## Planned Improvements
+## 📜 Available Scripts
 
-- Scoring / streak tracking
-- Difficulty levels
-- Hints for close guesses
-- Save high scores between sessions
+```bash
+npm run dev
+```
+
+Starts the development server.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run lint
+```
+
+Checks the project for ESLint issues.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+## 📌 Project Status
+
+The project currently contains three playable games and a shared game-selection interface.
+
+## 🔮 Possible Next Steps
+
+- Add persistent high scores
+- Add difficulty levels
+- Add scoring and streak systems
+- Add keyboard accessibility
+- Add automated tests
+- Deploy a live version
+
+## Built With
+
+**React • JavaScript • Vite • CSS**
