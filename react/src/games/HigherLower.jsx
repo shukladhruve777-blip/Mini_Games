@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { pickRandomNumber } from "./gameData";
-import { formatTime } from "./timeUtils";
+import { pickRandomNumber } from "../utils/gameData";
+import { formatTime } from "../utils/timeUtils";
 
 function HigherLower({ onBack }) {
   // which page we're on: "start" or "play"

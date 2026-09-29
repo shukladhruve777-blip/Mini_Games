@@ -1,3 +1,4 @@
+/* ---------- the main panel (menu and every game) ---------- */
 .start-screen,
 .game-container {
   display: flex;
@@ -5,49 +6,194 @@
   align-items: center;
   gap: 20px;
   text-align: center;
+  width: min(100%, 520px);
+  padding: 36px 28px;
+  box-sizing: border-box;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: 8px 8px 0 var(--ink);
 }
 
 .game-title {
-  font-size: 40px;
+  font-size: 44px;
+  margin: 0;
 }
 
-.start-options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+/* the short yellow line under each title */
+hr {
+  width: 64px;
+  height: 6px;
+  margin: 0;
+  border: 0;
+  border-radius: 3px;
+  background: var(--sun);
 }
 
+.start-options,
 .game-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
+  width: 100%;
 }
 
+.start-options p,
+.game-bar p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* ---------- buttons ---------- */
+button {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 0 5px 0 var(--ink);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--indigo);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--ink);
+}
+
+/* the button sinks when you press it */
+button:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+/* menu buttons: one color for each game */
+.menu-button {
+  width: 100%;
+  max-width: 300px;
+  color: var(--ink);
+}
+
+.menu-button:nth-child(1) {
+  background: var(--sun);
+}
+
+.menu-button:nth-child(2) {
+  background: var(--coral);
+}
+
+.menu-button:nth-child(3) {
+  background: var(--mint);
+}
+
+/* ---------- inputs and dropdowns ---------- */
+input,
+select {
+  font-family: inherit;
+  font-size: 18px;
+  padding: 10px 14px;
+  color: var(--ink);
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+}
+
+input {
+  width: 140px;
+  text-align: center;
+}
+
+/* ---------- Number Match ---------- */
 .dropdown-row {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 .dropdown-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .got-it {
-  color: green;
-  font-size: 14px;
+  color: var(--green);
+  font-size: 15px;
+  font-weight: 600;
   margin: 0;
 }
 
 .button-row {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 .result {
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ---------- Reaction Time ---------- */
+.reaction-box {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  color: var(--white);
+  font-size: 32px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.reaction-waiting {
+  background: #e5484d;
+}
+
+.reaction-go {
+  background: var(--green);
+}
+
+.reaction-early {
+  background: var(--sun);
+  color: var(--ink);
+}
+
+.reaction-result {
+  background: var(--indigo);
+}
+
+/* small screens */
+@media (max-width: 480px) {
+  .start-screen,
+  .game-container {
+    padding: 28px 18px;
+  }
+
+  .game-title {
+    font-size: 34px;
+  }
 }

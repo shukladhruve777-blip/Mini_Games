@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { makeNumbers, shuffleNumbers } from "./gameData";
-import { formatTime } from "./timeUtils";
+import { makeNumbers, shuffleNumbers } from "../utils/gameData";
+import { formatTime } from "../utils/timeUtils";
 
 function NumberMatch({ onBack }) {
   // which page we're on: "start" or "play"

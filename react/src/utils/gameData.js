@@ -33,3 +33,8 @@ export function shuffleNumbers(numbers) {
 export function pickRandomNumber(max) {
   return Math.floor(Math.random() * max) + 1;
 }
+
+// picks a random whole number of milliseconds between min and max (both included)
+export function pickRandomDelay(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

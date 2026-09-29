@@ -1,6 +1,20 @@
+/* colors used everywhere, defined once so they are easy to change */
+:root {
+  --page: #efecff;
+  --ink: #1e1b3a;
+  --white: #ffffff;
+  --indigo: #5b4cf5;
+  --sun: #ffc53d;
+  --coral: #ff6b5a;
+  --mint: #3ddc97;
+  --green: #1b8a5a;
+}
+
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Fredoka", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--page);
 }
 
 #root {
@@ -8,4 +22,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
 }

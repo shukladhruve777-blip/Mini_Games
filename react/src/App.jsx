@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import NumberMatch from "./NumberMatch";
-import HigherLower from "./HigherLower";
+import NumberMatch from "./games/NumberMatch";
+import HigherLower from "./games/HigherLower";
+import ReactionTime from "./games/ReactionTime";
 
 const GAMES = [
   { id: "numberMatch", name: "Number Match" },
   { id: "higherLower", name: "Higher or Lower" },
+  { id: "reactionTime", name: "Reaction Time" },
 ];
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
           {GAMES.map((game) => (
             <button
               key={game.id}
-              className="btn-primary"
+              className="btn-primary menu-button"
               onClick={() => setScreen(game.id)}
             >
               {game.name}
@@ -42,6 +44,10 @@ function App() {
 
   if (screen === "higherLower") {
     return <HigherLower onBack={goToMenu} />;
+  }
+
+  if (screen === "reactionTime") {
+    return <ReactionTime onBack={goToMenu} />;
   }
 
   return null;
