@@ -51,27 +51,27 @@ The application uses a shared menu and separate game components so each experien
 
 ### Game Selection
 
-![Mini Games menu](screenshots/screen-1.png)
+![Mini Games menu](screenshots/screen-1.jpeg)
 
 ### Higher or Lower
 
-![Higher or Lower gameplay](screenshots/screen-2.png)
+![Higher or Lower gameplay](screenshots/screen-2.jpeg)
 
 ### Higher or Lower — Result
 
-![Higher or Lower result](screenshots/screen-3.png)
+![Higher or Lower result](screenshots/screen-3.jpeg)
 
 ### Number Match
 
-![Number Match gameplay](screenshots/screen-4.png)
+![Number Match gameplay](screenshots/screen-4.jpeg)
 
 ### Reaction Time — Waiting State
 
-![Reaction Time waiting state](screenshots/screen-5.png)
+![Reaction Time waiting state](screenshots/screen-5.jpeg)
 
 ### Reaction Time — Result
 
-![Reaction Time result](screenshots/screen-6.png)
+![Reaction Time result](screenshots/screen-6.jpeg)
 
 ## 🧠 What I Practiced
 
