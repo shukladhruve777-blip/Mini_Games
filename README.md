@@ -2,10 +2,6 @@
 
 A React-based collection of small browser games built to practice interactive UI, state management, timing, randomization, and reusable JavaScript logic.
 
-# QuickGame
-
-A React-based collection of small browser games built to practice interactive UI, state management, timing, randomization, and reusable JavaScript logic.
-
 ### 🚀 [Live Demo → mini-games-two-rho.vercel.app](https://mini-games-two-rho.vercel.app)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Play%20Now-success?style=for-the-badge&logo=vercel)](https://mini-games-two-rho.vercel.app)
