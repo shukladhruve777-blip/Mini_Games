@@ -1,140 +1,161 @@
-# QuickGame
+# 🎮 Mini Games
 
 A React-based collection of small browser games built to practice interactive UI, state management, timing, randomization, and reusable JavaScript logic.
 
-### 🚀 [Live Demo → mini-games-two-rho.vercel.app](https://mini-games-two-rho.vercel.app)
+<p align="center">
+  <a href="https://mini-games-two-rho.vercel.app">
+    <img src="https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel" alt="Live Demo">
+  </a>
+  <a href="https://github.com/shukladhruve777-blip/Mini_Games">
+    <img src="https://img.shields.io/badge/Source%20Code-GitHub-181717?style=for-the-badge&logo=github" alt="Source Code">
+  </a>
+</p>
 
-## 🎮 Games
+> **Try it in your browser:** [mini-games-two-rho.vercel.app](https://mini-games-two-rho.vercel.app)
 
-| Game | What it tests |
-|---|---|
-| **Number Match** | Memory, ordering, and user input |
-| **Higher or Lower** | Prediction and game state |
-| **Reaction Time** | Timing and user interaction |
+---
 
-## ✨ Features
+## ✨ Project Overview
 
-- 3 playable browser games
-- Simple game selection menu
-- Separate React component for each game
-- React state management with `useState`
-- Random number and game generation
-- Timer-based gameplay
-- Reset and back-to-menu functionality
-- Reusable utility functions
-- ESLint for code quality
-- Vite development and production builds
+Mini Games is a browser-based React application containing three interactive games:
+
+- **Number Match** — choose numbers and test matching logic.
+- **Higher or Lower** — predict the target number using repeated guesses.
+- **Reaction Time** — wait for the correct signal and measure reaction speed.
+
+The application uses a shared menu and separate game components so each experience can be developed and maintained independently.
+
+## 🎯 Key Features
+
+- 🎮 Three playable games in one application
+- 🧭 Simple game-selection menu
+- ⚛️ React state management with `useState`
+- 🎲 Random number and game generation
+- ⏱️ Timer-based gameplay
+- 🔄 Play Again / Reset functionality
+- ↩️ Return-to-menu navigation
+- 🧩 Reusable JavaScript utility logic
+- 🛠️ Vite development and production builds
+- ✅ ESLint configuration for code quality
 
 ## 🛠️ Tech Stack
 
-- **React**
-- **JavaScript**
-- **Vite**
-- **CSS**
+| Technology | Purpose |
+|---|---|
+| **React** | Component-based UI and state management |
+| **JavaScript** | Game logic, events, randomization and timers |
+| **Vite** | Development server and production builds |
+| **CSS** | Responsive styling and game interface |
 
-## 📁 Project Structure
+## 🖥️ Screenshots
 
-```
-QuickGame/
-└── react/
-    ├── src/
-    │   ├── games/
-    │   │   ├── HigherLower.jsx
-    │   │   ├── NumberMatch.jsx
-    │   │   └── ReactionTime.jsx
-    │   │
-    │   ├── utils/
-    │   │   ├── gameData.js
-    │   │   └── timeUtils.js
-    │   │
-    │   ├── App.jsx
-    │   ├── App.css
-    │   └── main.jsx
-    │
-    ├── package.json
-    └── vite.config.js
-```
+### Game Selection
+
+![Mini Games menu](screenshots/screen-1.png)
+
+### Higher or Lower
+
+![Higher or Lower gameplay](screenshots/screen-2.png)
+
+### Higher or Lower — Result
+
+![Higher or Lower result](screenshots/screen-3.png)
+
+### Number Match
+
+![Number Match gameplay](screenshots/screen-4.png)
+
+### Reaction Time — Waiting State
+
+![Reaction Time waiting state](screenshots/screen-5.png)
+
+### Reaction Time — Result
+
+![Reaction Time result](screenshots/screen-6.png)
 
 ## 🧠 What I Practiced
 
-This project helped me practice:
+This project helped me develop practical experience with:
 
 - React component design
-- State management
-- Conditional rendering
+- State management and conditional rendering
 - Event handling
 - JavaScript arrays and functions
 - Randomization
-- Timers and asynchronous behavior
+- Timers and asynchronous behaviour
 - Reusable utility functions
-- Organizing multiple features inside one React application
+- Organizing multiple interactive features inside one application
+- Building and deploying a frontend application
 
 ## 🔄 Application Structure
 
-```
-                QuickGame
-                    │
-              Game Selection
-              /      |       \
-             /       |        \
-     Number Match  Higher/Lower  Reaction Time
-           │           │             │
-           └───────────┴─────────────┘
+```text
+                    Mini Games
+                        │
+                 Game Selection
+                /       |        \
+               /        |         \
+      Number Match  Higher/Lower  Reaction Time
+             │          │              │
+             └──────────┴──────────────┘
                     React State
                          │
                   Shared Utilities
 ```
 
+## 📁 Project Structure
+
+```text
+Mini_Games/
+└── react/
+    ├── src/
+    │   ├── games/
+    │   ├── utils/
+    │   ├── App.jsx
+    │   ├── App.css
+    │   └── main.jsx
+    ├── package.json
+    └── vite.config.js
+```
+
 ## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/shukladhruve777-blip/QuickGame.git
-cd QuickGame/react
+git clone https://github.com/shukladhruve777-blip/Mini_Games.git
+cd Mini_Games/react
 npm install
 npm run dev
 ```
 
 Then open the local URL shown in the terminal.
 
-## 📜 Available Scripts
+### Available Scripts
 
 ```bash
 npm run dev
-```
-
-Starts the development server.
-
-```bash
 npm run build
-```
-
-Creates a production build.
-
-```bash
 npm run lint
-```
-
-Checks the project for ESLint issues.
-
-```bash
 npm run preview
 ```
 
-Previews the production build locally.
-
 ## 📌 Project Status
 
-The project currently contains three playable games and a shared game-selection interface.
+The application currently contains three playable games and a shared game-selection interface.
 
 ## 🔮 Possible Next Steps
 
-- Add persistent high scores
-- Add difficulty levels
-- Add scoring and streak systems
-- Add keyboard accessibility
-- Add automated tests
-- Deploy a live version
+- Persistent high scores
+- Difficulty levels
+- Scoring and streak systems
+- Keyboard accessibility improvements
+- Automated tests
+- Additional mini games
 
-## Built With
+---
 
-**React • JavaScript • Vite • CSS**
+### 🔗 Links
+
+**Live Demo:** https://mini-games-two-rho.vercel.app  
+**GitHub Repository:** https://github.com/shukladhruve777-blip/Mini_Games
+
+**Built with React • JavaScript • Vite • CSS**
