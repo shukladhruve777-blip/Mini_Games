@@ -4,9 +4,6 @@ A React-based collection of small browser games built to practice interactive UI
 
 ### 🚀 [Live Demo → mini-games-two-rho.vercel.app](https://mini-games-two-rho.vercel.app)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Play%20Now-success?style=for-the-badge&logo=vercel)](https://mini-games-two-rho.vercel.app)
-[![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
-
 ## 🎮 Games
 
 | Game | What it tests |
