@@ -95,6 +95,19 @@ function NumberMatch({ onBack }) {
     return { statusPerBox, matchCount };
   }
 
+  // true only when every box was checked and every box is correct
+  function isEverythingMatched() {
+    if (matchStatus.length === 0) {
+      return false;
+    }
+    for (let i = 0; i < matchStatus.length; i++) {
+      if (!matchStatus[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   // runs when the player presses Confirm
   function handleConfirm() {
     if (!allBoxesFilled(selectedNumbers)) {
@@ -133,75 +146,77 @@ function NumberMatch({ onBack }) {
     setCompletionTime(null);
   }
 
+  const allMatched = isEverythingMatched();
+
   if (screen === "start") {
     return (
-      <div className="start-screen">
-        <h1 className="game-title">Number Match</h1>
-        <hr />
-        <div className="start-options">
-          <label htmlFor="count-input">
-            How many numbers do you want to play with?
-          </label>
-          <input
-            id="count-input"
-            type="number"
-            min="1"
-            value={count}
-            onChange={(event) => setCount(Number(event.target.value))}
-          />
-          <button className="btn-primary" onClick={handleStart}>
-            Start Game
-          </button>
-          <button className="btn-secondary" onClick={onBack}>
-            Back to Menu
-          </button>
+        <div className="start-screen">
+          <h1 className="game-title">Number Match</h1>
+          <hr />
+          <div className="start-options">
+            <label htmlFor="count-input">
+              How many numbers do you want to play with?
+            </label>
+            <input
+                id="count-input"
+                type="number"
+                min="1"
+                value={count}
+                onChange={(event) => setCount(Number(event.target.value))}
+            />
+            <button className="btn-primary" onClick={handleStart}>
+              Start Game
+            </button>
+            <button className="btn-secondary" onClick={onBack}>
+              Back to Menu
+            </button>
+          </div>
         </div>
-      </div>
     );
   }
 
   return (
-    <div className="game-container">
-      <div className="game-bar">
-        <div className="dropdown-row">
-          {selectedNumbers.map((selected, index) => (
-            <div key={index} className="dropdown-box">
-              <select
-                value={selected}
-                onChange={(event) => handleChange(index, event.target.value)}
-              >
-                <option value="">Select</option>
-                {numbers.map((number) => (
-                  <option key={number} value={number}>
-                    {number}
-                  </option>
-                ))}
-              </select>
+      <div className="game-container">
+        <div className="game-bar">
+          <div className="dropdown-row">
+            {selectedNumbers.map((selected, index) => (
+                <div key={index} className="dropdown-box">
+                  <select
+                      value={selected}
+                      onChange={(event) => handleChange(index, event.target.value)}
+                  >
+                    <option value="">Select</option>
+                    {numbers.map((number) => (
+                        <option key={number} value={number}>
+                          {number}
+                        </option>
+                    ))}
+                  </select>
 
-              {matchStatus[index] && <p className="got-it">Got it!</p>}
-            </div>
-          ))}
+                  {allMatched && <p className="got-it">Got it!</p>}
+                </div>
+            ))}
+          </div>
+
+          <div className="button-row">
+            <button className="btn-primary" onClick={handleConfirm}>
+              Confirm
+            </button>
+            <button className="btn-secondary" onClick={handleReset}>
+              Reset
+            </button>
+            <button className="btn-secondary" onClick={handleBackToStart}>
+              Back
+            </button>
+            <button className="btn-secondary" onClick={onBack}>
+              Menu
+            </button>
+          </div>
+
+          {result && <p className="result">{result}</p>}
+          {completionTime && <p className="result">Time: {completionTime}</p>}
         </div>
-
-        <div className="button-row">
-          <button className="btn-primary" onClick={handleConfirm}>
-            Confirm
-          </button>
-          <button className="btn-secondary" onClick={handleReset}>
-            Reset
-          </button>
-          <button className="btn-secondary" onClick={handleBackToStart}>
-            Back
-          </button>
-          <button className="btn-secondary" onClick={onBack}>
-            Menu
-          </button>
-        </div>
-
-        {result && <p className="result">{result}</p>}
-        {completionTime && <p className="result">Time: {completionTime}</p>}
       </div>
-    </div>
   );
 }
 
